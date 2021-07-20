@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let message;
+const ADMIN_PASSWORD = 'jqueryismyjam';
+let password = prompt("Password");
+if (password === null) {
+    message = "'Скасовано користувачем!'";
+}
+else if ((password === ADMIN_PASSWORD)) {
+    message = "'Ласкаво просимо!'";
+}
+else {
+    message = "'Доступ заборонений, невірний пароль!'";
+}
+alert(message);
+    </script>
+</body>
+</html>
