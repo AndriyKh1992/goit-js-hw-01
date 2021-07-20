@@ -8,19 +8,19 @@
 </head>
 <body>
     <script>
-    let message;
-const ADMIN_PASSWORD = 'jqueryismyjam';
-let password = prompt("Password");
-if (password === null) {
-    message = "'Скасовано користувачем!'";
+let needToAsk = true;
+let total = 0;
+do {
+    const input = prompt('Enter number');
+    if (input === null) {
+        needToAsk = false;
+    }
+    else {
+        total += Number(input);
+    }
 }
-else if ((password === ADMIN_PASSWORD)) {
-    message = "'Ласкаво просимо!'";
-}
-else {
-    message = "'Доступ заборонений, невірний пароль!'";
-}
-alert(message);
+while (needToAsk);
+alert('Загальна сума чисел дорівнює ' + total);
     </script>
 </body>
 </html>
